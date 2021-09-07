@@ -1,8 +1,86 @@
-<p>Hello 大家好</p>
-<p>我是霸都丶傲天，这是我的个人网站。 </p>
-<p>很高兴你来到这里, 你可以在以下的网站找到我</p>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>欢迎来到香氛密语</title>
+		<style>
+			body {
+				background: url(img/1的背景图.jpg) no-repeat center center;
+				background-size: cover;
+				/* 让背景图基于容器大小伸缩 */
+				background-attachment: fixed;
+				/* 当内容高度大于图片高度时，背景图像的位置相对于viewport固定 此条属性必须设置否则可能无效*/
+				background-color: #CCCCCC;
+				/* 设置背景颜色，背景图加载过程中会显示背景色 */
+			}
 
-<ul>
-  <li> <a href="https://www.zhihu.com/people/AJLoveChina">知乎</a> </li>
-  <li> <a href="http://hejie.nigeerhuo.com">我的博客(已经不更细了,现在在知乎写文章)</a> </li>
-</ul>
+			div.dialog-bz {
+				width: 550px;
+				height: 300px;
+				margin: auto;
+				margin-top: 200px;
+				background-color: white;
+				padding: 50px 50px 30px;
+				box-shadow: 10px 10px 15px black;
+				text-align: center;
+
+			}
+
+			.music {
+				float: right;
+				padding-bottom: 600px;
+			}
+
+			.dialog-bz-btn {
+				text-decoration: none;
+				font-size: larger;
+				color: #1f4e5f;
+			}
+
+			h2 {
+				font-family: Courier New;
+			}
+
+			#start {
+				width: 40px;
+				height: 40px;
+			}
+
+			a:hover {
+				background-color: #f4f7f7;
+				padding: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="dialog-bz">
+			<h2>I wear nothing but a few drops of perfume.</h2>
+			<h2>把六月夜晚花园里氤氲升腾的花香包起来<br>送给亲爱的你</h2><br>
+			<a href="主页.html" class="dialog-bz-btn"><b>立即探索</b></a>
+		</div>
+
+		<audio id="audio1" autoplay="autoplay" src="music/Richard Sanderson - Reality.flac" preload>
+			对不起，您的浏览器不支持HTML5音频API
+		</audio>
+		<div class="music">
+			<button id="play" οnclick="toggleMusic()"><img id="start" src="img/play.png" /></button>
+		</div>
+
+		<script>
+			var music = document.getElementById("audio1");
+			var toggleBtn = document.getElementById("play");
+
+			function toggleMusic() {
+				if (music.paused) {
+					music.play(); //如果音乐未播放则播放音乐
+					document.getElementById("start").src = "img/pause.png";
+
+				} else {
+					music.pause(); //暂停音乐
+					document.getElementById("start").src = "img/play.png";
+				}
+			}
+		</script>
+	</body>
+</html>
+
