@@ -1,86 +1,26 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<title>欢迎来到香氛密语</title>
-		<style>
-			body {
-				background: url(img/1的背景图.jpg) no-repeat center center;
-				background-size: cover;
-				/* 让背景图基于容器大小伸缩 */
-				background-attachment: fixed;
-				/* 当内容高度大于图片高度时，背景图像的位置相对于viewport固定 此条属性必须设置否则可能无效*/
-				background-color: #CCCCCC;
-				/* 设置背景颜色，背景图加载过程中会显示背景色 */
-			}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>沈功波的主网页</title>
+    <link href="css/styles.css" rel="stylesheet">
+</head>
 
-			div.dialog-bz {
-				width: 550px;
-				height: 300px;
-				margin: auto;
-				margin-top: 200px;
-				background-color: white;
-				padding: 50px 50px 30px;
-				box-shadow: 10px 10px 15px black;
-				text-align: center;
+<body>
+    <div class="home">
+        <div class="content">
+            <div class="stars"></div>
+            <img class="bgc" src="./img/preview2.jpg" width="100%" alt="">
+            <h2 class="title">欢迎来到我的个人网站</h2>
+            <h3 class="titles">今天也要加油鸭</h3>
 
-			}
+           <!-- <img class="icon" src="./img/abc.jpg" alt="">-->
+            <div class='ribbon'>
+                <a href='./index.html'><span>HOME</span></a>
+                <a href='./about.html'><span>ABOUT</span></a>
+                <a href='./表单.html'><span>FORM</span></a>
+                <a href='./视频.html'><span>VIDEO</span></a>
 
-			.music {
-				float: right;
-				padding-bottom: 600px;
-			}
-
-			.dialog-bz-btn {
-				text-decoration: none;
-				font-size: larger;
-				color: #1f4e5f;
-			}
-
-			h2 {
-				font-family: Courier New;
-			}
-
-			#start {
-				width: 40px;
-				height: 40px;
-			}
-
-			a:hover {
-				background-color: #f4f7f7;
-				padding: 10px;
-			}
-		</style>
-	</head>
-	<body>
-		<div class="dialog-bz">
-			<h2>I wear nothing but a few drops of perfume.</h2>
-			<h2>把九月夜晚花园里氤氲升腾的花香包起来<br>送给我的儿子</h2><br>
-			<a href="主页.html" class="dialog-bz-btn"><b>立即探索</b></a>
-		</div>
-
-		<audio id="audio1" autoplay="autoplay" preload>
-			对不起，您的浏览器不支持HTML5音频PI
-		</audio>
-		<div class="music">
-			<button id="play" οnclick="toggleMusic()"><img id="start" src="img/play.png" /></button>
-		</div>
-
-		<script>
-			var music = document.getElementById("audio1");
-			var toggleBtn = document.getElementById("play");
-
-			function toggleMusic() {
-				if (music.paused) {
-					music.play(); //如果音乐未播放则播放音乐
-					document.getElementById("start").src = "img/pause.png";
-
-				} else {
-					music.pause(); //暂停音
-					document.getElementById("start").src = "img/play.png";
-				}
-			}
-		</script>
-	</body>
-</html>
-
+            </div>
+<!--
